@@ -1,0 +1,6 @@
+config BR2_PACKAGE_HFSUTILS
+        bool "hfsutils"
+        help
+          HFS FS Access utils
+
+          http://www.mars.org/home/rob/proj/hfs/

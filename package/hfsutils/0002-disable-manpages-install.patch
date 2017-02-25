@@ -1,0 +1,31 @@
+From 0bca24465860a6aeb17f934cee032de955c67854 Mon Sep 17 00:00:00 2001
+From: masterzorag <masterzorag@gmail.com>
+Date: Sat, 25 Feb 2017 20:13:49 +0100
+Subject: [PATCH 2/2] disable manpages install
+
+---
+ Makefile.in | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+diff --git a/Makefile.in b/Makefile.in
+index 044df1a..461d88e 100644
+--- a/Makefile.in
++++ b/Makefile.in
+@@ -119,10 +119,10 @@ install_cli :: all_cli
+ 
+ 	rm -f "$(BINDEST)/$(HFSUTIL)"
+ 
+-	for file in $(GENERALDOCS) $(CLIDOCS); do  \
+-		$(LIBINSTALL) doc/man/$$file  \
+-		"$(MANDEST)/man$(MANEXT)/`basename $$file .1`.$(MANEXT)";  \
+-	done
++#	for file in $(GENERALDOCS) $(CLIDOCS); do  \
++#		$(LIBINSTALL) doc/man/$$file  \
++#		"$(MANDEST)/man$(MANEXT)/`basename $$file .1`.$(MANEXT)";  \
++#	done
+ 
+ install_tcl :: all_tcl
+ 	for file in $(TCLTARGETS); do  \
+-- 
+2.10.2
+

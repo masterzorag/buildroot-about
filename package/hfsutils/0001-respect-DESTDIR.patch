@@ -1,0 +1,29 @@
+From 66e6753275389d2108689207ce8f3249f6b660d2 Mon Sep 17 00:00:00 2001
+From: masterzorag <masterzorag@gmail.com>
+Date: Sat, 25 Feb 2017 20:12:26 +0100
+Subject: [PATCH 1/2] respect DESTDIR
+
+---
+ Makefile.in | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/Makefile.in b/Makefile.in
+index 27c2bfd..044df1a 100644
+--- a/Makefile.in
++++ b/Makefile.in
+@@ -111,10 +111,10 @@ check :: all
+ install :: @INSTALL_TARGETS@
+ 
+ install_cli :: all_cli
+-	$(BININSTALL) $(HFSUTIL) "$(BINDEST)/."
++	$(BININSTALL) $(HFSUTIL) "$(DESTDIR)$(BINDEST)/."
+ 
+ 	for file in $(CLITARGETS); do  \
+-		$(HARDLINK) "$(BINDEST)/$(HFSUTIL)" "$(BINDEST)/$$file";  \
++		$(HARDLINK) "$(DESTDIR)$(BINDEST)/$(HFSUTIL)" "$(DESTDIR)$(BINDEST)/$$file";  \
+ 	done
+ 
+ 	rm -f "$(BINDEST)/$(HFSUTIL)"
+-- 
+2.10.2
+
