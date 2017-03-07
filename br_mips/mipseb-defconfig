@@ -1,0 +1,12 @@
+BR2_mips=y
+BR2_DL_DIR="$(HOME)/dl"
+BR2_STATIC_LIBS=y
+BR2_KERNEL_HEADERS_3_4=y
+BR2_TOOLCHAIN_BUILDROOT_INET_RPC=y
+BR2_TOOLCHAIN_BUILDROOT_WCHAR=y
+# BR2_UCLIBC_INSTALL_UTILS is not set
+BR2_BINUTILS_VERSION_2_27_X=y
+BR2_GCC_VERSION_6_X=y
+BR2_EXTRA_GCC_CONFIG_OPTIONS="--with-endian=big --disable-libquadmath --disable-multilib --disable-shared --disable-gprof --disable-__cxa_atexit --disable-lto --enable-languages=c,c++ --disable-libssp --disable-libatomic"
+BR2_TOOLCHAIN_BUILDROOT_CXX=y
+# BR2_TARGET_ROOTFS_TAR is not set
