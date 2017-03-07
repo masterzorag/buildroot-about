@@ -1,5 +1,4 @@
-ppc64
-=====
+# buildroot sample for ppc64
 
 Example case:  
 You need to cross-compile a ppc64 bootloader on your x86 pc  
