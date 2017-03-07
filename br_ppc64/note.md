@@ -1,12 +1,14 @@
 ppc64
 =====
 
+Example case:  
+You need to cross-compile a ppc64 bootloader on your x86 pc  
 
-* store snapshot  
+* Store builted snapshot  
 ```sh
  cd br_ppc64
- cp /home/user/br_ppc64/images/vmlinux images/
- cp /home/user/br_ppc64/images/rootfs.cpio.xz images/
+ cp /output-folder/images/vmlinux images/
+ cp /output-folder/images/rootfs.cpio.xz images/
 ```
 
 * Test on emulated qemu-system-TARGET
