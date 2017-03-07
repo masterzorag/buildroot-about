@@ -9,6 +9,7 @@ buildroot notes and sample configurations, multitargeted.
 1.  Create your _buildroot-build_ folder  
 1a. Optional, add packages  
 2.  Import a sample config  
+2a. Optional, make changes
 3.  Build the cross-toolchain  
 3a. Build (kernel, initrd, or an image)  
 3b. Cross compile software  
@@ -21,6 +22,6 @@ BUILDROOTDIR=/path/to/buildroot-build/folder
 export PATH=$BUILDROOTDIR/output/host/usr/bin:$PATH
 ```
 
-### X compile
+### X (cross)compile
 With Makefiles, just ask for your compiler  
 `make CC=mips-buildroot-linux-uclibc-gcc CXX=mips-buildroot-linux-uclibc-g++ LD=mips-buildroot-linux-uclibc-ld`
