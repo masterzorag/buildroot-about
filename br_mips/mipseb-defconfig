@@ -7,4 +7,9 @@ BR2_TOOLCHAIN_BUILDROOT_WCHAR=y
 BR2_GCC_VERSION_6_X=y
 BR2_EXTRA_GCC_CONFIG_OPTIONS="--with-endian=big --disable-libquadmath --disable-multilib --disable-shared --disable-gprof --disable-__cxa_atexit --disable-lto --enable-languages=c,c++ --disable-libssp --disable-libatomic"
 BR2_TOOLCHAIN_BUILDROOT_CXX=y
+BR2_PACKAGE_BUSYBOX_CONFIG="$(CONFIG_DIR)/busybox.defconfig"
+BR2_PACKAGE_ZLIB=y
+BR2_PACKAGE_GMP=y
+BR2_PACKAGE_ARIA2=y
+BR2_PACKAGE_SCREEN=y
 # BR2_TARGET_ROOTFS_TAR is not set
