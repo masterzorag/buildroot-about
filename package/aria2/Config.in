@@ -1,0 +1,6 @@
+config BR2_PACKAGE_ARIA2
+        bool "aria2"
+        help
+          A download utility with segmented downloading with BitTorrent support
+
+          https://aria2.github.io
